@@ -1,0 +1,9 @@
+modules = ["python-3.12"]
+run = "python -m camply"
+
+[nix]
+channel = "stable-24_05"
+
+[deployment]
+run = ["sh", "-c", "python -m camply"]
+deploymentTarget = "cloudrun"
