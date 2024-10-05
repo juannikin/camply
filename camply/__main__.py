@@ -12,13 +12,9 @@ def process_input(user_input):
     # Process the user_input and return the result
     return f"Processed: {user_input}"
 
-# Keep your main() function for command-line usage
-def main():
-    while True:
-        user_input = input("Enter your input: ")
-        if user_input.lower() == 'quit':
-            break
-        print(process_input(user_input))
+def main(user_input):
+    return process_input(user_input)
 
 if __name__ == "__main__":
-    main()
+    print("This script is not meant to be run directly in a web environment.")
+    print("Please use the Flask app to interact with the application.")

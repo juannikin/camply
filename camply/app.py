@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request, jsonify
-from your_existing_app import process_input  # Import your existing application's main function
+from camply.__main__ import main as camply_main
 
 app = Flask(__name__)
 
@@ -7,7 +7,7 @@ app = Flask(__name__)
 def index():
     if request.method == 'POST':
         user_input = request.form['user_input']
-        output = process_input(user_input)  # Call your existing application's function
+        output = camply_main(user_input)  # Call your existing application's function
         return jsonify({'output': output})
     return render_template('index.html')
 
